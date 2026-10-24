@@ -1,0 +1,10 @@
+# Neovim runtime artifacts
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local scratch / swap files
+*.swp
+*.swo
+tags

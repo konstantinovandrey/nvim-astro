@@ -34,6 +34,8 @@ return {
 
   {
     "folke/which-key.nvim",
+    -- extend AstroNvim's which-key spec instead of replacing it
+    opts_extend = { "spec" },
     opts = {
       spec = {
         { "<leader>m", group = "Molten/Jupyter", icon = "󰠮" },
