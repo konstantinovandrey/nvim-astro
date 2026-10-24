@@ -31,4 +31,13 @@ return {
     "scalameta/nvim-metals",
     ft = { "scala", "sbt" },
   },
+
+  {
+    "folke/which-key.nvim",
+    opts = {
+      spec = {
+        { "<leader>m", group = "Molten/Jupyter", icon = "󰠮" },
+      },
+    },
+  },
 }

@@ -62,6 +62,18 @@ return {
           end,
           desc = "Run/Compile file",
         },
+        -- Molten / Jupyter notebooks
+        ["<Leader>mi"] = { ":MoltenInit<CR>", desc = "Molten: init kernel" },
+        ["<Leader>ml"] = { ":MoltenEvaluateLine<CR>", desc = "Molten: evaluate line" },
+        ["<Leader>mc"] = { ":MoltenReevaluateCell<CR>", desc = "Molten: re-evaluate cell" },
+        ["<Leader>md"] = { ":MoltenDelete<CR>", desc = "Molten: delete output" },
+        ["<Leader>mo"] = { ":MoltenShowOutput<CR>", desc = "Molten: show output" },
+        ["<Leader>mh"] = { ":MoltenHideOutput<CR>", desc = "Molten: hide output" },
+        ["<Leader>mr"] = { ":MoltenRestart<CR>", desc = "Molten: restart kernel" },
+        ["<Leader>me"] = { ":MoltenEvaluateOperator<CR>", desc = "Molten: evaluate operator" },
+      },
+      v = {
+        ["<Leader>mv"] = { ":<C-u>MoltenEvaluateVisual<CR>gv<ESC>", desc = "Molten: evaluate selection" },
       },
     },
   },
