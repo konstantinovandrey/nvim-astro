@@ -5,7 +5,7 @@ extended with a Jupyter notebook workflow (`jupytext` + `molten-nvim`).
 
 | | |
 |---|---|
-| Repo | `github.com/konstantinovandrey/nvim-astro` (private) |
+| Repo | `github.com/konstantinovandrey/nvim-astro` (public) |
 | Windows config path | `%LOCALAPPDATA%\nvim` |
 | Windows data path | `%LOCALAPPDATA%\nvim-data` |
 | Linux config path | `~/.config/nvim` |
@@ -178,4 +178,4 @@ The original template README is kept verbatim in
 
 ## License
 
-MIT
+MIT — see [`LICENSE.md`](LICENSE.md).
