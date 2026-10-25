@@ -26,11 +26,15 @@ end
 
 -- jupytext.nvim shells out to the `jupytext` CLI, so the venv's Scripts dir
 -- must be on PATH no matter how nvim was launched.
+-- The ipykernel spec we use launches a bare "python", so the venv has to win
+-- on PATH for the kernel to run in the same interpreter.
 local venv_bin = venv_python and vim.fn.fnamemodify(venv_python, ":h") or nil
 if venv_bin then
   local current_path = vim.env.PATH or ""
   if not current_path:find(venv_bin, 1, true) then
-    vim.env.PATH = venv_bin .. ";" .. current_path
+    -- ";" on Windows, ":" on POSIX
+    local sep = package.config:sub(1, 1)
+    vim.env.PATH = venv_bin .. sep .. current_path
   end
 end
 
